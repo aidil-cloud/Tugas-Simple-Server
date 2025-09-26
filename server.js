@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const port = 3000; // bisa pakai 80 juga, tapi 3000 lebih aman di lokal
+const port = 3000; 
 
 app.use(express.json());
 app.get('/', (req, res) => {
