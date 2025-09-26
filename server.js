@@ -1,4 +1,4 @@
-// Kodingan ASLI by AIDIL
+// Kodingan ASLI by AIDIL and AI
 
 const express = require('express');
 const app = express();
