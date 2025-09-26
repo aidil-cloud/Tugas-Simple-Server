@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Express</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang di Express.js!</h1>
+        
+        <p id="pesan-utama">Klik tombol di bawah</p>
+        
+        <button id="tombol-klik">Klik Saya</button>
+    </div>
+
+    <script>
+        // 1. Dapatkan referensi ke elemen
+        const tombol = document.getElementById('tombol-klik');
+        const pesan = document.getElementById('pesan-utama');
+
+        // 2. Tambahkan event listener untuk mendengarkan klik
+        tombol.addEventListener('click', function() {
+            
+            // A. UBAH TULISAN
+            pesan.textContent = 'Tugas Selesaiiii Alhamdulillah!!!!!';
+            
+            // B. UBAH UKURAN TEKS DAN GAYA (Membuat tulisan lebih besar)
+            pesan.style.fontSize = '2.5em'; 
+            pesan.style.color = '#ffffff';
+            
+            // C. EFEK FONT MENGEKOR (TEXT SHADOW) untuk tampilan menarik
+            // Format: 'offset-x offset-y blur-radius color'
+            pesan.style.textShadow = '4px 4px 6px #FF0000, 6px 6px 8px #FFA500'; 
+            // Menggunakan warna Merah dan Oranye untuk efek menyala/ekor
+            
+            // D. SEMBUNYIKAN TOMBOL
+            tombol.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
