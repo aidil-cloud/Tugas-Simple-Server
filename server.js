@@ -1,14 +1,14 @@
 const express = require('express');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const xssFilter = require('xss'); // pake xss untuk sanitize string
+const xssFilter = require('xss'); 
 
 const app = express();
 const port = 3000;
 
 app.use(helmet());
 app.use(express.json());
-// jangan gunakan xss-clean karena bermasalah di beberapa versi
+
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -40,12 +40,12 @@ app.get('/api/hello', (req, res) => {
 app.post('/api/data', authMiddleware, (req, res) => {
   const body = req.body || {};
 
-  // Sanitasi menggunakan xss untuk semua field string
+ 
   if (body.username && typeof body.username === 'string') {
     body.username = xssFilter(body.username);
   }
 
-  // validasi sederhana
+
   if ('username' in body) {
     if (typeof body.username !== 'string' || /['";\-]/.test(body.username)) {
       console.warn('[SEC] SQL injection / invalid username detected:', body.username);
