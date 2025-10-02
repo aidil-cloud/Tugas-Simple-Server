@@ -1,0 +1,3 @@
+{"time":"2025-10-02T12:00:52.349Z","reason":"SQL injection / invalid input detected","method":"POST","path":"/dummy-post","maskedBody":{"username":"admin'; --","password":"***"},"rawLength":42}
+{"time":"2025-10-02T12:07:17.415Z","reason":"SQL injection / invalid input detected","method":"POST","path":"/dummy-post","maskedBody":{"username":"admin'; --","password":"***"},"rawLength":42}
+{"time":"2025-10-02T16:42:22.468Z","reason":"SQL injection / invalid input detected","method":"POST","path":"/dummy-post","maskedBody":{"username":"admin'","password":"***********"},"rawLength":46}
