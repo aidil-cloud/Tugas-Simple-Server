@@ -1,3 +1,15 @@
+# Folder dependensi Node.js
 node_modules/
-.DS_Store
+
+# File kunci kriptografi 
+private.pem
+public.pem
+
+# File environment
 .env
+
+# File log 
+*.log
+
+# File sistem operasi
+.DS_Store
